@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin | LinkPulse</title>
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <div class="brand">LinkPulse</div>
+      <div class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="create-url.html">Create URL</a>
+        <a href="admin.html">Admin</a>
+        <button id="themeToggleBtn" class="btn btn-secondary small" type="button">Dark mode</button>
+        <button id="logoutBtn" class="btn btn-secondary small">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container dashboard">
+    <section class="stats-grid">
+      <div class="stat-card"><p>Total Users</p><h3 id="totalUsers">0</h3></div>
+      <div class="stat-card"><p>Active Users</p><h3 id="activeUsers">0</h3></div>
+      <div class="stat-card"><p>Total URLs</p><h3 id="totalUrls">0</h3></div>
+      <div class="stat-card"><p>Total Clicks</p><h3 id="totalClicks">0</h3></div>
+    </section>
+
+    <section class="panel">
+      <h2>Users</h2>
+      <div id="usersTable"></div>
+    </section>
+
+    <section class="panel">
+      <h2>URLs</h2>
+      <div id="adminUrlsTable"></div>
+    </section>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

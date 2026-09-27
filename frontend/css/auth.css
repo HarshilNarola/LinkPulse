@@ -1,0 +1,131 @@
+:root {
+  --bg: #edf4ff;
+  --bg-end: #dbeafe;
+  --surface: #ffffff;
+  --surface-2: #f8fafc;
+  --text: #111827;
+  --muted: #475569;
+  --border: #dbe4f0;
+  --primary: #2563eb;
+  --button-text: #ffffff;
+  --shadow: rgba(15, 23, 42, 0.08);
+}
+
+:root[data-theme='dark'] {
+  --bg: #0f172a;
+  --bg-end: #334155;
+  --surface: #111827;
+  --surface-2: #1e293b;
+  --text: #e5e7eb;
+  --muted: #cbd5e1;
+  --border: #334155;
+  --primary: #60a5fa;
+  --button-text: #e2e8eb;
+  --shadow: rgba(2, 6, 23, 0.45);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  color: var(--text);
+  background: linear-gradient(135deg, var(--bg), var(--bg-end));
+}
+
+.auth-container {
+  position: relative;
+  width: min(450px, 90%);
+  padding-top: 58px;
+}
+
+.auth-toolbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.auth-theme-toggle {
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 8px 20px var(--shadow);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.auth-card {
+  padding: 28px;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 15px 35px var(--shadow);
+}
+
+.auth-card h2 {
+  margin: 0 0 24px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 16px;
+}
+
+.field-group label {
+  font-weight: 600;
+}
+
+.auth-card input {
+  width: 100%;
+  min-height: 42px;
+  padding: 10px 12px;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface-2);
+  color: var(--text);
+  font: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.auth-card input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.18);
+}
+
+.btn {
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: var(--primary);
+  color: var(--button-text);
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.switch-text {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.message {
+  min-height: 20px;
+  margin-top: 14px;
+  color: #b91c1c;
+}

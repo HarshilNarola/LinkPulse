@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create URL | LinkPulse</title>
+  <link rel="stylesheet" href="css/dashboard.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <div class="brand">LinkPulse</div>
+      <div class="nav-links">
+        <a href="dashboard.html">Dashboard</a>
+        <a href="create-url.html">Create URL</a>
+        <a href="admin.html" id="adminLink" hidden>Admin</a>
+        <button id="themeToggleBtn" class="btn btn-secondary small" type="button">Dark mode</button>
+        <button id="logoutBtn" class="btn btn-secondary small">Logout</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container form-page">
+    <section class="panel form-panel">
+      <h2>Create a shortened URL</h2>
+      <form id="createUrlForm">
+        <label>Original URL</label>
+        <input type="url" id="originalUrl" required />
+
+        <label>Expiration date/time (optional)</label>
+        <input type="datetime-local" id="expiresAt" />
+
+        <button type="submit" class="btn btn-primary">Create</button>
+      </form>
+      <div id="resultMessage" class="message"></div>
+      <div id="shortUrlBox" class="short-url-box hidden"></div>
+    </section>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
